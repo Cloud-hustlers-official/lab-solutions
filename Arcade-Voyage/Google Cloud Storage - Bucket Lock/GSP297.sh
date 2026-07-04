@@ -76,7 +76,17 @@ pause_for_check "4. Set up Temporary Hold"
 echo
 echo "${HEADER_COLOR}${BOLD_TEXT}=== TASK 5a: Enable default Event-Based Hold on bucket ===${RESET_FORMAT}"
 gsutil retention event-default set "gs://$BUCKET/"
-gsutil retention event-default get "gs://$BUCKET/"
+echo "${ACTION_COLOR}Verifying default hold actually stuck (API consistency)...${RESET_FORMAT}"
+for i in $(seq 1 10); do
+  status=$(gsutil ls -Lb "gs://$BUCKET/" 2>&1)
+  if echo "$status" | grep -qi "Default Event-Based Hold:.*Enabled"; then
+    echo "$status" | grep -i "Default Event-Based Hold"
+    break
+  fi
+  echo "${TEXT_COLOR}⏳ Not confirmed yet, re-setting and retrying ($i/10)...${RESET_FORMAT}"
+  gsutil retention event-default set "gs://$BUCKET/"
+  sleep 3
+done
 echo "${SUCCESS_COLOR}✓ Default event-based hold enabled on bucket${RESET_FORMAT}"
 echo "${WARNING_COLOR}${BOLD_TEXT}⚠ ABHI koi aur command mat chalao — seedha 'Check my progress' daba is state pe.${RESET_FORMAT}"
 pause_for_check "5. Create Event-based holds (default hold enabled check)"
