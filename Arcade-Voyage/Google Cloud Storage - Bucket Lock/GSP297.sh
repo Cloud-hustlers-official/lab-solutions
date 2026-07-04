@@ -1,19 +1,5 @@
 #!/bin/bash
 
-HEADER_COLOR=$'\033[38;5;54m'       # Deep purple
-TITLE_COLOR=$'\033[38;5;93m'         # Bright purple
-PROMPT_COLOR=$'\033[38;5;178m'       # Gold
-ACTION_COLOR=$'\033[38;5;44m'        # Teal
-SUCCESS_COLOR=$'\033[38;5;46m'       # Bright green
-WARNING_COLOR=$'\033[38;5;196m'      # Bright red
-LINK_COLOR=$'\033[38;5;27m'          # Blue
-TEXT_COLOR=$'\033[38;5;255m'         # Bright white
-
-NO_COLOR=$'\033[0m'
-RESET_FORMAT=$'\033[0m'
-BOLD_TEXT=$'\033[1m'
-UNDERLINE_TEXT=$'\033[4m'
-
 clear
 
 
