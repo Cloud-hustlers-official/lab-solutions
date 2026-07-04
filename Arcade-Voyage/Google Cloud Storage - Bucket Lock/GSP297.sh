@@ -74,15 +74,22 @@ echo "${SUCCESS_COLOR}✓ Temp hold flow done, file deleted${RESET_FORMAT}"
 pause_for_check "4. Set up Temporary Hold"
 
 echo
-echo "${HEADER_COLOR}${BOLD_TEXT}=== TASK 5: Event-Based Holds ===${RESET_FORMAT}"
+echo "${HEADER_COLOR}${BOLD_TEXT}=== TASK 5a: Enable default Event-Based Hold on bucket ===${RESET_FORMAT}"
 gsutil retention event-default set "gs://$BUCKET/"
+gsutil retention event-default get "gs://$BUCKET/"
+echo "${SUCCESS_COLOR}✓ Default event-based hold enabled on bucket${RESET_FORMAT}"
+echo "${WARNING_COLOR}${BOLD_TEXT}⚠ ABHI koi aur command mat chalao — seedha 'Check my progress' daba is state pe.${RESET_FORMAT}"
+pause_for_check "5. Create Event-based holds (default hold enabled check)"
+
+echo
+echo "${HEADER_COLOR}${BOLD_TEXT}=== TASK 5b: Upload loan + release hold ===${RESET_FORMAT}"
 gsutil cp gs://spls/gsp297/dummy_loan "gs://$BUCKET/"
 until gsutil ls "gs://$BUCKET/dummy_loan" &>/dev/null; do sleep 2; done
 gsutil ls -L "gs://$BUCKET/dummy_loan"
 gsutil retention event release "gs://$BUCKET/dummy_loan"
 gsutil ls -L "gs://$BUCKET/dummy_loan"
-echo "${SUCCESS_COLOR}✓ Event-based hold set & released${RESET_FORMAT}"
-pause_for_check "5. Create Event-based holds"
+echo "${SUCCESS_COLOR}✓ Event-based hold released on dummy_loan${RESET_FORMAT}"
+pause_for_check "5. Create Event-based holds (release check)"
 
 echo
 echo "${HEADER_COLOR}${BOLD_TEXT}=== TASK 6: Remove Bucket ===${RESET_FORMAT}"
