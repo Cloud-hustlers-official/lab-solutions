@@ -19,7 +19,7 @@ clear
 
 echo
 echo "${HEADER_COLOR}${BOLD_TEXT}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${RESET_FORMAT}"
-echo "${TITLE_COLOR}${BOLD_TEXT}       🎓 DR. CLOUD HUSTLERS CLOUD STORAGE MASTERY       ${RESET_FORMAT}"
+echo "${TITLE_COLOR}${BOLD_TEXT}          CLOUD HUSTLERS CLOUD STORAGE MASTERY       ${RESET_FORMAT}"
 echo "${HEADER_COLOR}${BOLD_TEXT}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${RESET_FORMAT}"
 echo
 echo "${TEXT_COLOR}This lab demonstrates advanced Cloud Storage features including${RESET_FORMAT}"
