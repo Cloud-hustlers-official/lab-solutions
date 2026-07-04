@@ -1,12 +1,21 @@
 #!/bin/bash
 
+HEADER_COLOR=$'\033[38;5;54m'       # Deep purple
+TITLE_COLOR=$'\033[38;5;93m'         # Bright purple
+PROMPT_COLOR=$'\033[38;5;178m'       # Gold
+ACTION_COLOR=$'\033[38;5;44m'        # Teal
+SUCCESS_COLOR=$'\033[38;5;46m'       # Bright green
+WARNING_COLOR=$'\033[38;5;196m'      # Bright red
+LINK_COLOR=$'\033[38;5;27m'          # Blue
+TEXT_COLOR=$'\033[38;5;255m'         # Bright white
+
+NO_COLOR=$'\033[0m'
+RESET_FORMAT=$'\033[0m'
+BOLD_TEXT=$'\033[1m'
+UNDERLINE_TEXT=$'\033[4m'
+
 clear
 
-
-echo
-echo "${HEADER_COLOR}${BOLD_TEXT}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${RESET_FORMAT}"
-echo "${TITLE_COLOR}${BOLD_TEXT}        CLOUD STORAGE                                 ${RESET_FORMAT}"
-echo "${HEADER_COLOR}${BOLD_TEXT}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${RESET_FORMAT}"
 echo
 echo "${TEXT_COLOR}This lab demonstrates advanced Cloud Storage features including${RESET_FORMAT}"
 echo "${TEXT_COLOR}retention policies, holds, and object lifecycle management.${RESET_FORMAT}"
@@ -32,7 +41,7 @@ export BUCKET=$(gcloud config get-value project)
 
 # Cloud Storage operations section
 echo
-echo "${HEADER_COLOR}${BOLD_TEXT} ============== CLOUD STORAGE OPERATIONS =====================${RESET_FORMAT}"
+echo "${HEADER_COLOR}${BOLD_TEXT}┏━━━━━━━━━━━━━━ CLOUD STORAGE OPERATIONS ━━━━━━━━━━━━┓${RESET_FORMAT}"
 echo
 
 echo "${ACTION_COLOR}${BOLD_TEXT}🛠️  Creating bucket: gs://$BUCKET${RESET_FORMAT}"
@@ -101,4 +110,6 @@ echo "${TEXT_COLOR}• Created and configured a storage bucket"
 echo "• Implemented retention policies and holds"
 echo "• Managed object lifecycle controls"
 echo "• Tested protection mechanisms${RESET_FORMAT}"
-
+echo
+echo "${PROMPT_COLOR}${BOLD_TEXT}   Don't forget to like and subscribe!${RESET_FORMAT}"
+echo
