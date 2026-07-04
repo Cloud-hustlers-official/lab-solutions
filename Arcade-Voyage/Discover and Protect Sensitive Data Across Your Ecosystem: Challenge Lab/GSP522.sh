@@ -34,19 +34,6 @@ RANDOM_BG_COLOR=${BG_COLORS[$RANDOM % ${#BG_COLORS[@]}]}
 
 #----------------------------------------------------start--------------------------------------------------#
 
-# Display welcome message
-echo "${CYAN}${BOLD}"
-cat << "EOF"
-  ____ _                 _   _   _       _   _  __ _          _ _ 
- / ___| | ___  _   _  __| | | \ | | ___ | |_(_)/ _(_) ___  __| | |
-| |   | |/ _ \| | | |/ _` | |  \| |/ _ \| __| | |_| |/ _ \/ _` | |
-| |___| | (_) | |_| | (_| | | |\  | (_) | |_| |  _| |  __/ (_| |_|
- \____|_|\___/ \__,_|\__,_| |_| \_|\___/ \__|_|_| |_|\___|\__,_(_)
-EOF
-echo "${RESET}"
-echo "${GREEN}${BOLD}Welcome to the Cloud DLP Lab Script!${RESET}"
-echo "${BLUE}${BOLD}----------------------------------------------------${RESET}"
-
 echo "${RANDOM_BG_COLOR}${RANDOM_TEXT_COLOR}${BOLD}Starting Execution${RESET}"
 
 # Step 1: Export project ID and project number
