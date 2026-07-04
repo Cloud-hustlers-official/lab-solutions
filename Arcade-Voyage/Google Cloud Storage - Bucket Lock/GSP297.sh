@@ -18,9 +18,9 @@ clear
 
 
 echo
-echo "${HEADER_COLOR}${BOLD_TEXT} ======================================================= ${RESET_FORMAT}"
-echo "${TITLE_COLOR}${BOLD_TEXT}          CLOUD HUSTLERS CLOUD STORAGE MASTERY       ${RESET_FORMAT}"
-echo "${HEADER_COLOR}${BOLD_TEXT}======================================================= ${RESET_FORMAT}"
+echo "${HEADER_COLOR}${BOLD_TEXT}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${RESET_FORMAT}"
+echo "${TITLE_COLOR}${BOLD_TEXT}        CLOUD STORAGE                                 ${RESET_FORMAT}"
+echo "${HEADER_COLOR}${BOLD_TEXT}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${RESET_FORMAT}"
 echo
 echo "${TEXT_COLOR}This lab demonstrates advanced Cloud Storage features including${RESET_FORMAT}"
 echo "${TEXT_COLOR}retention policies, holds, and object lifecycle management.${RESET_FORMAT}"
@@ -46,7 +46,7 @@ export BUCKET=$(gcloud config get-value project)
 
 # Cloud Storage operations section
 echo
-echo "${HEADER_COLOR}${BOLD_TEXT}┏━━━━━━━━━━━━━━ CLOUD STORAGE OPERATIONS ━━━━━━━━━━━━┓${RESET_FORMAT}"
+echo "${HEADER_COLOR}${BOLD_TEXT} ============== CLOUD STORAGE OPERATIONS =====================${RESET_FORMAT}"
 echo
 
 echo "${ACTION_COLOR}${BOLD_TEXT}🛠️  Creating bucket: gs://$BUCKET${RESET_FORMAT}"
@@ -115,5 +115,4 @@ echo "${TEXT_COLOR}• Created and configured a storage bucket"
 echo "• Implemented retention policies and holds"
 echo "• Managed object lifecycle controls"
 echo "• Tested protection mechanisms${RESET_FORMAT}"
-echo "${PROMPT_COLOR}${BOLD_TEXT}   Don't forget to like and subscribe!${RESET_FORMAT}"
-echo
+
