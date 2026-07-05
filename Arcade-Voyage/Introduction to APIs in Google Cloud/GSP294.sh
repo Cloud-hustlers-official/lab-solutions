@@ -20,7 +20,7 @@ clear
 
 echo
 echo "${HEADER_COLOR}${BOLD_TEXT}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${RESET_FORMAT}"
-echo "${TITLE_COLOR}${BOLD_TEXT}       🎓 CLOUD HUSTLER TUTORIAL       ${RESET_FORMAT}"
+echo "${TITLE_COLOR}${BOLD_TEXT}                        CLOUD HUSTLER TUTORIAL       ${RESET_FORMAT}"
 echo "${HEADER_COLOR}${BOLD_TEXT}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${RESET_FORMAT}"
 echo
 echo "${TEXT_COLOR}This lab demonstrates advanced Cloud Storage API operations${RESET_FORMAT}"
