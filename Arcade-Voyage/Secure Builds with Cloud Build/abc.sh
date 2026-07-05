@@ -77,7 +77,7 @@ echo "${YELLOW}Creating application files...${RESET}"
 mkdir -p vuln-scan && cd vuln-scan
 
 cat > ./Dockerfile << EOF
-FROM gcr.io/google-appengine/debian10@sha256:d25b680d69e8b386ab189c3ab45e219fededb9f91e1ab51f8e999f3edc40d2a1
+FROM gcr.io/google-appengine/debian11
 
 # System
 RUN apt update && apt install python3-pip -y
@@ -230,15 +230,15 @@ echo
 echo "${GREEN}${BOLD}▬▬▬▬▬▬▬▬▬ UPDATED APPLICATION ▬▬▬▬▬▬▬▬▬${RESET}"
 echo "${YELLOW}Updating application with newer dependencies...${RESET}"
 cat > ./Dockerfile << EOF
-FROM python:3.8-alpine 
+FROM python:3.12-alpine 
 
 # App
 WORKDIR /app
 COPY . ./
 
-RUN pip3 install Flask==2.1.0
-RUN pip3 install gunicorn==20.1.0
-RUN pip3 install Werkzeug==2.2.2
+RUN pip3 install Flask==3.0.3
+RUN pip3 install gunicorn==22.0.0
+RUN pip3 install Werkzeug==3.0.3
 
 CMD exec gunicorn --bind :\$PORT --workers 1 --threads 8 main:app
 EOF
