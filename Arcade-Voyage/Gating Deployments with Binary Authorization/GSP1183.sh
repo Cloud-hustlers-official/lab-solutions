@@ -216,6 +216,15 @@ gcloud beta container clusters create binauthz \
     --zone $ZONE \
     --binauthz-evaluation-mode=PROJECT_SINGLETON_POLICY_ENFORCE
 
+# --- FIX (added): fetch kubectl credentials for the new cluster ---
+# Without this, kubectl has no context pointing at the "binauthz" cluster,
+# and every later "kubectl apply" (Task 7 and Task 8) fails with an
+# "Unauthorized" / "unable to connect to the server" error.
+gcloud container clusters get-credentials binauthz \
+    --zone $ZONE \
+    --project ${PROJECT_ID}
+# --- END FIX ---
+
 gcloud projects add-iam-policy-binding ${PROJECT_ID} \
     --member="serviceAccount:${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com" \
     --role="roles/container.developer"
