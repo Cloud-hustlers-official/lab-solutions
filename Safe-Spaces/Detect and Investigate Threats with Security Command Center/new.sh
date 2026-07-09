@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 export ZONE=$(gcloud compute project-info describe \
 --format="value(commonInstanceMetadata.items[google-compute-default-zone])")
 
@@ -51,8 +54,4 @@ sleep 30
 gcloud compute ssh instance-1 --zone=$ZONE --tunnel-through-iap --project "$DEVSHELL_PROJECT_ID" --quiet --command "gcloud projects get-iam-policy \$(gcloud config get project) && curl etd-malware-trigger.goog"
 
 
---------------------------------------------------------------------------------------------------------
-
-gcloud compute instances delete instance-1 --zone=$ZONE --quiet
-
---------------------------------------------------------------------------------------------------------
+echo  "check task 1 and 2 and click on check my progess "
