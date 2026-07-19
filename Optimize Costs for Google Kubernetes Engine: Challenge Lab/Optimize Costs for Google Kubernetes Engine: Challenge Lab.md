@@ -12,9 +12,9 @@
 ### Run the following Commands in CloudShell
 
 ```
-curl -LO https://raw.githubusercontent.com/Itsabhishek7py/GoogleCloudSkillsboost/refs/heads/main/Optimize%20Costs%20for%20Google%20Kubernetes%20Engine%3A%20Challenge%20Lab/abhishek.sh
-sudo chmod +x abhishek.sh
-./abhishek.sh
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Optimize%20Costs%20for%20Google%20Kubernetes%20Engine%3A%20Challenge%20Lab/GSP343.sh
+sudo chmod +x GSP343.sh
+./GSP343.sh
 ```
 ### Congratulations !!!!
 
