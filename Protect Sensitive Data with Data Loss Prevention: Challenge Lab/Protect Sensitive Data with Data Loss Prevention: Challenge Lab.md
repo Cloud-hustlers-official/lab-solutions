@@ -11,9 +11,9 @@
 ### Run the following Commands in CloudShell
 
 ```
-curl -LO https://raw.githubusercontent.com/Itsabhishek7py/GoogleCloudSkillsboost/refs/heads/main/Protect%20Sensitive%20Data%20with%20Data%20Loss%20Prevention%3A%20Challenge%20Lab/abhishek.sh
-sudo chmod +x abhishek.sh
-./abhishek.sh
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Protect%20Sensitive%20Data%20with%20Data%20Loss%20Prevention%3A%20Challenge%20Lab/ARC116.sh
+sudo chmod +x ARC116.sh
+./ARC116.sh
 ```
 ### Congratulations !!!!
 
