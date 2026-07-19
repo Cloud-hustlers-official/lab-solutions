@@ -109,7 +109,7 @@ echo "${MAGENTA_TEXT}${BOLD_TEXT}Disabling uniform bucket-level access...${RESET
 gsutil uniformbucketlevelaccess set off gs://scc-export-bucket-$DEVSHELL_PROJECT_ID
 
 echo "${CYAN_TEXT}${BOLD_TEXT}Downloading findings.jsonl file...${RESET_FORMAT}"
-curl -LO raw.githubusercontent.com/Itsabhishek7py/GoogleCloudSkillsboost/refs/heads/main/Mitigate%20Threats%20and%20Vulnerabilities%20with%20Security%20Command%20Center%3A%20Challenge%20Lab/findings.jsonl
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Mitigate%20Threats%20and%20Vulnerabilities%20with%20Security%20Command%20Center%3A%20Challenge%20Lab/findings.jsonl
 
 echo "${CYAN_TEXT}${BOLD_TEXT}Uploading findings.jsonl to the bucket...${RESET_FORMAT}"
 gsutil cp findings.jsonl gs://scc-export-bucket-$DEVSHELL_PROJECT_ID
