@@ -24,9 +24,9 @@ export REGION=
 ```
 
 ```
-curl -LO https://raw.githubusercontent.com/Itsabhishek7py/GoogleCloudSkillsboost/refs/heads/main/Cloud%20Run%20Functions%3A%203%20Ways%3A%20Challenge%20Lab/abhishek.sh
-sudo chmod +x abhishek.sh
-./abhishek.sh
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Build%20Serverless%20Applications%20with%20Cloud%20Run%20Functions/ARC104.sh
+sudo chmod +x ARC104.sh
+./ARC104.sh
 ```
 ### Congratulations !!!!
 
