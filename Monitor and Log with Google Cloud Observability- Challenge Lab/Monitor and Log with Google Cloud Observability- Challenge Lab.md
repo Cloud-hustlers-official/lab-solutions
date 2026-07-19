@@ -15,9 +15,9 @@
 ### Run the following Commands in CloudShell
 
 ```
-curl -LO https://raw.githubusercontent.com/abhishekmsm51w-star/gcpbyabhi/refs/heads/main/Monitor%20and%20Log%20with%20Google%20Cloud%20Observability-%20Challenge%20Lab/abhishek.sh
-sudo chmod +x abhishek.sh
-./abhishek.sh
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Monitor%20and%20Log%20with%20Google%20Cloud%20Observability-%20Challenge%20Lab/GSP338.sh
+sudo chmod +x GSP338.sh
+./GSP338.sh
 ```
 ### Congratulations !!!!
 
