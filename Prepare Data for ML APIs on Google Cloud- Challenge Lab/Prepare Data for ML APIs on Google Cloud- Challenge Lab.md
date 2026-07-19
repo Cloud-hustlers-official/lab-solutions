@@ -12,9 +12,9 @@
 ### Run the following Commands in CloudShell
 
 ```
-curl -LO https://raw.githubusercontent.com/abhishekmsm51w-star/gcpbyabhi/refs/heads/main/Prepare%20Data%20for%20ML%20APIs%20on%20Google%20Cloud-%20Challenge%20Lab/drabhishek.sh
-sudo chmod +x drabhishek.sh
-./drabhishek.sh
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Prepare%20Data%20for%20ML%20APIs%20on%20Google%20Cloud-%20Challenge%20Lab/GSP323.sh
+sudo chmod +x GSP323.sh
+./GSP323.sh
 ```
 ### Congratulations !!!!
 
