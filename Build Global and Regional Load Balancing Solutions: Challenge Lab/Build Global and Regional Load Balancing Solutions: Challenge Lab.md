@@ -147,14 +147,14 @@ Run in SSH
 curl http://[LB_IP]:110
 ```
 ```bash
-curl -LO https://raw.githubusercontent.com/Itsabhishek7py/GoogleCloudSkillsboost/refs/heads/main/Build%20Global%20and%20Regional%20Load%20Balancing%20Solutions%3A%20Challenge%20Lab/drabhishek.sh
-sudo chmod +x drabhishek.sh
-./drabhishek.sh
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Build%20Global%20and%20Regional%20Load%20Balancing%20Solutions%3A%20Challenge%20Lab/GSP539.sh
+sudo chmod +x GSP539.sh
+./GSP539.sh
 ```
 ```
-curl -LO https://raw.githubusercontent.com/Itsabhishek7py/GoogleCloudSkillsboost/refs/heads/main/Build%20Global%20and%20Regional%20Load%20Balancing%20Solutions%3A%20Challenge%20Lab/drabhishek1.sh
-sudo chmod +x drabhishek1.sh
-./drabhishek1.sh
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Build%20Global%20and%20Regional%20Load%20Balancing%20Solutions%3A%20Challenge%20Lab/1GSP539.sh
+sudo chmod +x 1GSP539.sh
+./1GSP539.sh
 ```
 ```
 curl http://[LB_IP]:110
