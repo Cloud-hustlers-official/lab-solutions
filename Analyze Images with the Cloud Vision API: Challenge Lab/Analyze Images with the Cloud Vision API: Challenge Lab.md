@@ -11,7 +11,7 @@
 ### Run the following Commands in CloudShell
 
 ```
-curl -LO https://github.com/Cloud-hustlers-official/lab-solutions/blob/main/Analyze%20Images%20with%20the%20Cloud%20Vision%20API%3A%20Challenge%20Lab/ARC122.sh
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Analyze%20Images%20with%20the%20Cloud%20Vision%20API%3A%20Challenge%20Lab/ARC122.sh
 sudo chmod +x ARC122.sh
 ./ARC122.sh
 ```
