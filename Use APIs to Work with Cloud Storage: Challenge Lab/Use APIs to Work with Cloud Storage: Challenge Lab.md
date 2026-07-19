@@ -25,11 +25,9 @@ In this hands-on lab, you will learn how to use the **APIS for cloud storage** t
 # Download the script
 
 ```
-
-curl -LO https://raw.githubusercontent.com/Itsabhishek7py/GoogleCloudSkillsboost/refs/heads/main/Use%20APIs%20to%20Work%20with%20Cloud%20Storage%3A%20Challenge%20Lab/abhishekARC125.sh
-
-sudo chmod +x abhishekARC125.sh
-./abhishekARC125.sh
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Use%20APIs%20to%20Work%20with%20Cloud%20Storage%3A%20Challenge%20Lab/ARC125.sh
+sudo chmod +x ARC125.sh
+./ARC125.sh
 ```
 
 
