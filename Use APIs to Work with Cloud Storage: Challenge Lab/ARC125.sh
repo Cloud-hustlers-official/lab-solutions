@@ -69,7 +69,7 @@ success "Bucket $DEVSHELL_PROJECT_ID-bucket-2 created successfully"
 
 # Step 5: Download the image file
 step "Downloading world.jpeg image file..."
-curl -s -LO https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/9cf40ec8a380bbe71712daeb0a172d8844a2787f/Use%20APIs%20to%20Work%20with%20Cloud%20Storage%3A%20Challenge%20Lab/world.jpeg
+curl -s -LO https://github.com/Cloud-hustlers-official/lab-solutions/blob/main/Use%20APIs%20to%20Work%20with%20Cloud%20Storage%3A%20Challenge%20Lab/world.jpeg
 success "Image downloaded successfully"
 
 # Step 6: Upload image file to bucket1
