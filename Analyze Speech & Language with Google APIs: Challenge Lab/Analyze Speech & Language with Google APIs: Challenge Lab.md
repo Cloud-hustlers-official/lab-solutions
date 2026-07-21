@@ -10,10 +10,16 @@
 
 ### Run the following Commands in CloudShell
 
+```bash
+export ZONE=$(gcloud compute instances list lab-vm --format 'csv[no-heading](zone)')
+gcloud compute ssh lab-vm --project=$DEVSHELL_PROJECT_ID --zone=$ZONE --quiet
 ```
-curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Analyze%20Speech%20%26%20Language%20with%20Google%20APIs%3A%20Challenge%20Lab/ARC114.sh
-sudo chmod +x ARC114.sh
-./ARC114.sh
+
+```bash
+wget -O ARC114.sh "https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Analyze%20Speech%20%26%20Language%20with%20Google%20APIs%3A%20Challenge%20Lab/ARC114.sh"
+sed -i 's/\r$//' ARC114.sh
+chmod +x ARC114.sh
+bash ARC114.sh
 ```
 ### Congratulations !!!!
 
