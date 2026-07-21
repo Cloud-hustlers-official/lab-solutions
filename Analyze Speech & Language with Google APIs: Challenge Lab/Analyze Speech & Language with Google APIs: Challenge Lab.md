@@ -16,10 +16,10 @@ gcloud compute ssh lab-vm --project=$DEVSHELL_PROJECT_ID --zone=$ZONE --quiet
 ```
 
 ```bash
-wget -O ARC131.sh "https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Analyze%20Speech%20%26%20Language%20with%20Google%20APIs%3A%20Challenge%20Lab/ARC131.sh"
-sed -i 's/\r$//' ARC131.sh
-chmod +x ARC131.sh
-bash ARC131.sh
+wget -O ARC114.sh "https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Analyze%20Speech%20%26%20Language%20with%20Google%20APIs%3A%20Challenge%20Lab/ARC114.sh"
+sed -i 's/\r$//' ARC114.sh
+chmod +x ARC114.sh
+bash ARC114.sh
 ```
 ### Congratulations !!!!
 
