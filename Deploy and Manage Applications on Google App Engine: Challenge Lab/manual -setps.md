@@ -61,6 +61,8 @@ add this line
 ```
 sed -i '/automatic_scaling:/,/^[^ ]/ s/max_instances:.*/max_instances: 10/' app.yaml
 ```
+
+Change with new magessage in app.ymal 
 or 
 
 automatic_scaling:
