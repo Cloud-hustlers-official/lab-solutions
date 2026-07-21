@@ -9,16 +9,8 @@
 
 ---
 
-## Task 2: Create an App Engine Application
 
-1. Go to **App Engine**.
-2. Click **Create Application**.
-3. Select the region specified in the lab (e.g., `us-west1`).
-4. Click **Create App**.
-
----
-
-## Task 3: Clone the Sample Application
+## Task 2: Clone the Sample Application
 
 Open **Cloud Shell** and run:
 
@@ -30,12 +22,25 @@ cd python-docs-samples/appengine/standard_python3/hello_world
 
 ---
 
+
+## Task 2: Create an App Engine Application
+
+1. Go to **App Engine**.
+2. Click **Create Application**.
+3. Select the region specified in the lab (e.g., `us-west1`).
+4. Click **Create App**.
+
+---
+
 ## Task 4: Update the Application Message
 
 Replace the default message using `sed`:
 
 ```bash
-sed -i '32c\    return "YOUR_MESSAGE"' main.py
+sed -i '32c\    return "Hello, World!"' main.py
+
+gcloud app deploy app.yaml
+
 ```
 
 > Replace `YOUR_MESSAGE` with the message provided in the lab.
@@ -51,13 +56,22 @@ Verify you're in the correct directory:
 ```bash
 ls
 ```
+add this line 
 
+```
+sed -i '/automatic_scaling:/,/^[^ ]/ s/max_instances:.*/max_instances: 10/' app.yaml
+```
+or 
+
+automatic_scaling:
+  max_instances: 10
+  
 You should see `app.yaml`.
 
 Deploy:
 
 ```bash
-gcloud app deploy
+gcloud app deploy app.yaml
 ```
 
 Type **Y** when prompted.
