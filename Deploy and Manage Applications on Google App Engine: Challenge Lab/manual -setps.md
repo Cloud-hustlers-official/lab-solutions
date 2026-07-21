@@ -23,7 +23,7 @@ cd python-docs-samples/appengine/standard_python3/hello_world
 ---
 
 
-## Task 2: Create an App Engine Application
+## Task 3: Create an App Engine Application
 
 1. Go to **App Engine**.
 2. Click **Create Application**.
@@ -59,16 +59,12 @@ ls
 add this line 
 
 ```
-sed -i '/automatic_scaling:/,/^[^ ]/ s/max_instances:.*/max_instances: 10/' app.yaml
+sed -i '32c\    return "Welcome to this, World!"' main.py
 ```
 
 Change with new magessage in app.ymal 
 or 
 
-automatic_scaling:
-  max_instances: 10
-  
-You should see `app.yaml`.
 
 Deploy:
 
@@ -96,14 +92,5 @@ gcloud app describe
 
 ---
 
-## Common Error
-
-### `An app.yaml file is required`
-
-You're not in the application directory.
-
-```bash
-cd python-docs-samples/appengine/standard_python3/hello_world
-
-gcloud app deploy
+oud app deploy
 ```
