@@ -12,32 +12,19 @@ WHITE_TEXT=$'\033[0;97m'
 
 NO_COLOR=$'\033[0m'
 RESET_FORMAT=$'\033[0m'
+
+# Define text formatting variables
 BOLD_TEXT=$'\033[1m'
 UNDERLINE_TEXT=$'\033[4m'
 
-# Display welcome message
-print_welcome() {
-    clear
-    echo "${BLUE_TEXT}${BOLD_TEXT}=============================================${RESET_FORMAT}"
-    echo "${BLUE_TEXT}${BOLD_TEXT}  Welcome to Cloud Hustlers Tutorials!   ${RESET_FORMAT}"
-    echo "${BLUE_TEXT}${BOLD_TEXT}  Google Cloud NLP API Demonstration         ${RESET_FORMAT}"
-    echo "${BLUE_TEXT}${BOLD_TEXT}=============================================${RESET_FORMAT}"
-    echo
-}
+clear
 
-# Display completion message
-print_completion() {
-    echo
-    echo "${GREEN_TEXT}${BOLD_TEXT}=============================================${RESET_FORMAT}"
-    echo "${GREEN_TEXT}${BOLD_TEXT}      Lab Completed Successfully!           ${RESET_FORMAT}"
-    echo "${GREEN_TEXT}${BOLD_TEXT}=============================================${RESET_FORMAT}"
-    echo
-    echo "${BLUE_TEXT}${BOLD_TEXT}For more cloud tutorials, visit:${RESET_FORMAT}"
-    echo "${BLUE_TEXT}https://www.youtube.com/@CloudHustlers/videos${RESET_FORMAT}"
-    echo
-}
+# Welcome message
+echo "${CYAN_TEXT}${BOLD_TEXT}==================================================================${RESET_FORMAT}"
+echo "${CYAN_TEXT}${BOLD_TEXT}      SUBSCRIBE CLOUD HUSTLERS- INITIATING EXECUTION...  ${RESET_FORMAT}"
+echo "${CYAN_TEXT}${BOLD_TEXT}==================================================================${RESET_FORMAT}"
+echo
 
-print_welcome
 
 # Get API Key
 read -p "${CYAN_TEXT}${BOLD_TEXT}Enter your Google Cloud API Key: ${RESET_FORMAT}" API_KEY_INPUT
@@ -136,4 +123,13 @@ echo
 echo "${YELLOW_TEXT}${BOLD_TEXT}Running Sentiment Analysis on sample review...${RESET_FORMAT}"
 python3 sentiment_analysis.py reviews/bladerunner-pos.txt
 
-print_completion
+
+# Final message
+echo
+echo "${CYAN_TEXT}${BOLD_TEXT}=======================================================${RESET_FORMAT}"
+echo "${CYAN_TEXT}${BOLD_TEXT}              LAB COMPLETED SUCCESSFULLY!              ${RESET_FORMAT}"
+echo "${CYAN_TEXT}${BOLD_TEXT}=======================================================${RESET_FORMAT}"
+echo
+echo "${RED_TEXT}${BOLD_TEXT}${UNDERLINE_TEXT}https://www.youtube.com/@CloudHustlers${RESET_FORMAT}"
+echo "${GREEN_TEXT}${BOLD_TEXT}Don't forget to Like, Share and Subscribe for more Videos${RESET_FORMAT}"
+echo
