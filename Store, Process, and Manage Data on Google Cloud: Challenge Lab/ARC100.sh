@@ -26,7 +26,7 @@ clear
 
 # Welcome message
 echo "${CYAN_TEXT}${BOLD_TEXT}==================================================================${RESET_FORMAT}"
-echo "${CYAN_TEXT}${BOLD_TEXT}      WELCOME TO CLOUD HUSTLERS TUTORIAL -LIKE THE VIDEO    ${RESET_FORMAT}"
+echo "${CYAN_TEXT}${BOLD_TEXT}      SUBSCRIBE CLOUD HUSTLERS- INITIATING EXECUTION...  ${RESET_FORMAT}"
 echo "${CYAN_TEXT}${BOLD_TEXT}==================================================================${RESET_FORMAT}"
 echo
 
@@ -213,14 +213,8 @@ gsutil cp map.jpg gs://$BUCKET
 
 echo
 echo "${CYAN_TEXT}${BOLD_TEXT}=======================================================${RESET_FORMAT}"
-echo "${CYAN_TEXT}${BOLD_TEXT}         LAB COMPLETED SUCCESSFULLY!                  ${RESET_FORMAT}"
+echo "${CYAN_TEXT}${BOLD_TEXT}              LAB COMPLETED SUCCESSFULLY!              ${RESET_FORMAT}"
 echo "${CYAN_TEXT}${BOLD_TEXT}=======================================================${RESET_FORMAT}"
 echo
-echo "${MAGENTA_TEXT}${BOLD_TEXT}*******************************************************${RESET_FORMAT}"
-echo "${MAGENTA_TEXT}${BOLD_TEXT}*  THANK YOU FOR USING CLOUD HUSTLERS TUTORIAL *${RESET_FORMAT}"
-echo "${MAGENTA_TEXT}${BOLD_TEXT}*******************************************************${RESET_FORMAT}"
-echo
-echo "${BLUE_TEXT}${BOLD_TEXT}Don't forget to subscribe to Cloud Hustlers YouTube channel:${RESET_FORMAT}"
-echo "${RED_TEXT}${BOLD_TEXT}${UNDERLINE_TEXT}https://www.youtube.com/@CloudHustlers/videos${RESET_FORMAT}"
-echo
-echo "${GREEN_TEXT}${BOLD_TEXT}Please like, share and subscribe for more cloud tutorials!${RESET_FORMAT}"
+echo "${RED_TEXT}${BOLD_TEXT}${UNDERLINE_TEXT}https://www.youtube.com/@CloudHustlers${RESET_FORMAT}"
+echo "${GREEN_TEXT}${BOLD_TEXT}Don't forget to Like, Share and Subscribe for more Videos${RESET_FORMAT}"
