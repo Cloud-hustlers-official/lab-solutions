@@ -10,13 +10,16 @@ if error change from enterprise to vertxai
 In this task, you'll use the Gemini 2.5 Flash to write and execute Python code to perform a simple data analysis task, such as calculating the average price of a list of basketball sneakers.
  ### Generate and Execute Code using Gemini 2.5 Flash ###
  #### 1. Define the code execution tool
- ```bash
-code_execution_tool = Tool(code_execution=ToolCodeExecution())
+# Task 2
+
+```
+Code == Tool(code_execution=ToolCodeExecution())
+
+
 ```
  #### 2. Define the prompt with the code to be executed
  ```bash
-PROMPT = f"""Use Python to calculate the average price of the sneakers in the list:
-{sneaker_prices}
+Remove the prompt = f"""what is the average price of sneakers in {sneaker_prices}
 Generate and run code for the calculation."""
 ```
 
