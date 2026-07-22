@@ -15,9 +15,9 @@
 ## ☁️ Run in Cloud Shell:
 
 ```bash
-curl -LO raw.githubusercontent.com/prateekrajput08/Arcade-Google-Cloud-Labs/refs/heads/main/Enrich%20Metadata%20and%20Discovery%20of%20BigLake%20Data%3A%20Challenge%20Lab/TechCode.sh
-sudo chmod +x TechCode.sh 
-./TechCode.sh
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Enrich%20Metadata%20and%20Discovery%20of%20BigLake%20Data%3A%20Challenge%20Lab/ARC123.sh
+sudo chmod +x ARC123.sh
+./ARC123.sh
 ```
 ## Task 3. Create an aspect and apply it to the BigLake table
 ### Enumerated field named Sensitive Data Type that contains three values: `Location info`, `Contact info`, and `None`.
