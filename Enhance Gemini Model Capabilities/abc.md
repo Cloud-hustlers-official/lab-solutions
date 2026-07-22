@@ -3,7 +3,7 @@
 Update the zone if mentioned 
 
 
-if error change from enterprise to vertxai
+if error change from enterprise to vertexai
 ```
 
 ### Task 2. Execute code with Gemini ###
