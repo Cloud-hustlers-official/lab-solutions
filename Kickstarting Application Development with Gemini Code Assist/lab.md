@@ -184,6 +184,7 @@ function addOrUpdateFirestore(product) {
 //Subscribe to CLOUD HUSTLERS https://www.youtube.com/@CloudHustlers/videos
 ```
 ```bash
+cd
 cd cymbal-superstore/functions
 ```
 **⚠️Change `REGION` of below As per your lab Instruction**
