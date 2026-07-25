@@ -1,6 +1,6 @@
 ## Create and Manage Cloud Spanner Instances: Challenge Lab| [GSP381](https://www.cloudskillsboost.google/catalog_lab/5731)
 
-## Youtube Explanation Video [here](https://youtu.be/GXHFMA3zZL4)
+## Youtube Explanation Video 
 
 ## 🌐 **Guide to Complete the Challenge Lab:**
 
