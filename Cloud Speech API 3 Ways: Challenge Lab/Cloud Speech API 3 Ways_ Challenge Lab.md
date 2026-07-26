@@ -159,9 +159,5 @@ curl -s -X POST \
 
 ### Congratulations !!!!
 
-## Join the Community
-
-[![Telegram](https://img.shields.io/badge/Join-Telegram_Group-blue?style=for-the-badge&logo=telegram)](https://t.me/+gBcgRTlZLyM4OGI1) - Connect with fellow cloud enthusiasts, ask questions, and share your learning journey.
-
 
 
