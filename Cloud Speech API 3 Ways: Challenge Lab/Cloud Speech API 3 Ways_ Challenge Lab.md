@@ -156,6 +156,32 @@ curl -s -X POST \
   -o "$task_5_file"
 ```
 
+If Taks 4 not working use the below command again 
+
+```
+cat > translate.json <<EOF
+{
+  "q": "$task_4_sentence",
+  "source": "$SOURCE_LANG",
+  "target": "$TARGET_LANG",
+  "format": "text"
+}
+EOF
+
+curl -s \
+  -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d @translate.json \
+  "https://translation.googleapis.com/language/translate/v2" \
+  > "$task_4_file"
+  
+```
+
+
+```
+curl -s -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" -H "Content-Type: application/json; charset=utf-8" -d '{"q":"これは日本語です。","source":"ja","target":"en"}' "https://translation.googleapis.com/language/translate/v2" > translation_response.txt
+```
+
 If Taks 5 not working use the below command again 
 
 ```
