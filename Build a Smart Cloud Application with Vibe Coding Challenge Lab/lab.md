@@ -1,7 +1,7 @@
 
 # Build a Smart Cloud Application with Vibe Coding: Challenge Lab
 
-[![Watch on YouTube](https://img.shields.io/badge/Watch_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/QLpiCXoLMlE)
+[![Watch on YouTube](https://img.shields.io/badge/Watch_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/zudY1o3uEko)
 
 > **Note:** Establish Hybrid Network Connectivity with NCC
 
@@ -52,7 +52,7 @@ uv python pin 3.13
 uv run server.py
 ```
 
-[![Watch on YouTube For 100% SCORE](https://img.shields.io/badge/Watch_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/QLpiCXoLMlE)
+[![Watch on YouTube For 100% SCORE](https://img.shields.io/badge/Watch_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/zudY1o3uEko)
 
 ```bash
 tools = [google_search]
