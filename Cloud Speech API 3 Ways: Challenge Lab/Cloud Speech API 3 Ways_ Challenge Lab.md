@@ -1,6 +1,6 @@
 ## Cloud Speech API 3 Ways: Challenge Lab
 
-
+Enable Speech to test and Translataion API
 
 
 ***To start the VM session on Cloud Shell*** 
@@ -154,6 +154,24 @@ curl -s -X POST \
   -d "{\"q\": [\"$decoded_sentence\"]}" \
   "https://translation.googleapis.com/language/translate/v2/detect?key=${API_KEY}" \
   -o "$task_5_file"
+```
+
+If Taks 5 not working use the below command again 
+
+```
+cat > detect_language.json <<EOF
+{
+  "q": "$task_5_sentence"
+}
+EOF
+
+curl -s \
+  -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d @detect_language.json \
+  "https://translation.googleapis.com/language/translate/v2/detect" \
+  > "$task_5_file"
+  
 ```
 
 
