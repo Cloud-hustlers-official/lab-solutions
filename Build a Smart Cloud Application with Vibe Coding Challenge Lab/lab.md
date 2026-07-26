@@ -45,6 +45,13 @@ gcloud projects add-iam-policy-binding "$PROJECT_ID" \
 
 echo -e "\n\e[1;32mIAM roles applied successfully for\e[0m \e[1;33m$STUDENT_EMAIL\e[0m \e[1;32mon project\e[0m \e[1;33m$PROJECT_ID\e[0m\n"
 ```
+FOR THE EXTERNAL ENVIRONMENT ISSUE
+```
+uv python install 3.13
+uv python pin 3.13
+uv run server.py
+```
+
 [![Watch on YouTube For 100% SCORE](https://img.shields.io/badge/Watch_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/QLpiCXoLMlE)
 
 ```bash
