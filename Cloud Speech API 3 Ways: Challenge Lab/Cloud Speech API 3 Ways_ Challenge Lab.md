@@ -159,6 +159,10 @@ curl -s -X POST \
 If Taks 4 not working use the below command again 
 
 ```
+# Set the source and target languages (change these values according to the lab)
+SOURCE_LANG="ja"
+TARGET_LANG="en"
+
 cat > translate.json <<EOF
 {
   "q": "$task_4_sentence",
