@@ -1,37 +1,40 @@
-import argparse
-
-import vertexai
-from vertexai.preview.vision_models import ImageGenerationModel
+from google import genai
+from google.genai import types
 
 def generate_image(
     project_id: str, location: str, output_file: str, prompt: str
-) -> vertexai.preview.vision_models.ImageGenerationResponse:
-    """Generate an image using a text prompt.
-    Args:
-      project_id: Google Cloud project ID, used to initialize Vertex AI.
-      location: Google Cloud region, used to initialize Vertex AI.
-      output_file: Local path to the output image file.
-      prompt: The text prompt describing what you want to see."""
+):
+    """Generate an image using a text prompt via the new GenAI SDK."""
 
-    vertexai.init(project=project_id, location=location)
-
-    model = ImageGenerationModel.from_pretrained("imagen-3.0-generate-002")
-
-    images = model.generate_images(
-        prompt=prompt,
-        # Optional parameters
-        number_of_images=1,
-        seed=1,
-        add_watermark=False,
+    # 1. Initialize the GenAI Client for Vertex AI
+    client = genai.Client(
+        vertexai=True,
+        project=project_id,
+        location=location
     )
 
-    images[0].save(location=output_file)
+    # 2. Invoke the Gemini 2.5 Flash Image model using generate_content
+    response = client.models.generate_content(
+        model="gemini-2.5-flash-image",
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            # This config explicitly tells the Gemini model to return an image
+            response_modalities=["IMAGE"],
+        )
+    )
 
-    return images
+    # 3. Save the image to the specified output file locally
+    for part in response.parts:
+        if part.inline_data:
+            # part.as_image() converts the raw bytes into a PIL Image object
+            generated_image = part.as_image()
+            generated_image.save(output_file)
+            print(f"Success! Image successfully saved to {output_file}")
 
+# Execute the function using your Qwiklabs details
 generate_image(
-    project_id='<PROJECT_ID>',
-    location='<REGION>',
+    project_id='<project id>',
+    location='<region>',
     output_file='image.jpeg',
     prompt='Create an image containing a bouquet of 2 sunflowers and 3 roses',
-    )
+)
