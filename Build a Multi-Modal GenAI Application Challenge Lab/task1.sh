@@ -18,7 +18,6 @@ def generate_image(
         model="gemini-2.5-flash-image",
         contents=prompt,
         config=types.GenerateContentConfig(
-            # This config explicitly tells the Gemini model to return an image
             response_modalities=["IMAGE"],
         )
     )
@@ -26,15 +25,19 @@ def generate_image(
     # 3. Save the image to the specified output file locally
     for part in response.parts:
         if part.inline_data:
-            # part.as_image() converts the raw bytes into a PIL Image object
             generated_image = part.as_image()
             generated_image.save(output_file)
             print(f"Success! Image successfully saved to {output_file}")
 
-# Execute the function using your Qwiklabs details
+# ==============================================================================
+# EDIT THESE VARIABLES BEFORE RUNNING
+# ==============================================================================
+PROJECT_ID = 'Project id'  # <-- UPDATE to current Project ID
+REGION = 'region'                          # <-- UPDATE to current Region
+
 generate_image(
-    project_id='<project id>',
-    location='<region>',
+    project_id=PROJECT_ID,
+    location=REGION,
     output_file='image.jpeg',
     prompt='Create an image containing a bouquet of 2 sunflowers and 3 roses',
 )
