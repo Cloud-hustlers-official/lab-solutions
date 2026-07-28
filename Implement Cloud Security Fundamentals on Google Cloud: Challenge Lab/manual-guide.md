@@ -261,6 +261,12 @@ The service **orca-hello-service** should be created successfully.
 Alternate of task 4 and 5
 
 ```
+
+read -p "Enter CUSTOM_SECURITY_ROLE: " CUSTOM_SECURITY_ROLE
+read -p "Enter SERVICE_ACCOUNT: " SERVICE_ACCOUNT
+read -p "Enter CLUSTER_NAME: " CLUSTER_NAME
+read -p "Enter ZONE: " ZONE 
+
 gcloud container clusters create $CLUSTER_NAME \
 --num-nodes 1 \
 --master-ipv4-cidr=172.16.0.64/28 \
