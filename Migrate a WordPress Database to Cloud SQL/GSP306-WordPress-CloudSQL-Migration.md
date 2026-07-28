@@ -25,15 +25,15 @@
 | Create User | `SQL → wordpress → Users → Add User Account` | `blogadmin` / `Password1*` / Host `%` |
 | Authorize VM | `SQL → wordpress → Connections → Networking → Authorized Networks → Add Network` | `blog-vm` → `BLOG_VM_EXTERNAL_IP/32` |
 
+> **Wait 1–2 minutes** after saving the Authorized Network before connecting to Cloud SQL.
+
 ✅ Check Progress
 
-
-
-
-**Automate way **
 ---
 
-# Set Variables
+# Automate Way
+
+## Set Variables
 
 ```bash
 export ZONE=ZONE
@@ -57,13 +57,10 @@ gcloud sql users create blogadmin --instance=wordpress --host=% --password="Pass
 Go to:
 
 ```
-SQL
-└── wordpress
-    └── Connections
-        └── Security
+SQL → wordpress → Connections → Security
 ```
 
-Disable
+Disable:
 
 ```
 Allow only SSL connections
@@ -77,10 +74,17 @@ Click **Save**.
 
 # Task 3, Task 4 & Task 5
 
-SSH into the **blog** VM and run:
+### Get the Cloud SQL Public IP (Run in Cloud Shell)
 
 ```bash
 export CLOUD_SQL_IP=$(gcloud sql instances describe wordpress --format="value(ipAddresses.ipAddress)")
+echo $CLOUD_SQL_IP
+```
+
+### SSH into the **blog** VM and run:
+
+```bash
+export CLOUD_SQL_IP=<CLOUD_SQL_PUBLIC_IP>
 
 sudo apt update
 sudo apt install default-mysql-client -y
@@ -91,13 +95,22 @@ mysql --host=$CLOUD_SQL_IP -u blogadmin -p'Password1*' wordpress < wordpress_db_
 
 sudo sed -i "s/localhost/$CLOUD_SQL_IP/g" /var/www/html/wordpress/wp-config.php
 
+grep DB_HOST /var/www/html/wordpress/wp-config.php
+
 sudo service apache2 restart
 ```
 
-Open the Blog VM External IP in your browser.
+Open the **Blog VM External IP** in your browser.
 
 ✅ **Check Progress**
 
 ---
 
 # Lab Complete ✅
+
+- ✅ Task 1 Complete
+- ✅ Task 2 Complete
+- ✅ Task 3 Complete
+- ✅ Task 4 Complete
+- ✅ Task 5 Complete
+- ✅ 100% Score
