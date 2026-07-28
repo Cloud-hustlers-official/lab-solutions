@@ -1,6 +1,36 @@
 # GSP306 - Challenge Lab Solution
 ## Migrate a WordPress Database to Cloud SQL
 
+# Task 1 - Create Cloud SQL Instance
+
+**Navigation:** `SQL → Create Instance → MySQL`
+
+| Instance ID | Password | Version | Region | Zone | Machine |
+|--------------|----------|---------|--------|------|---------|
+| `wordpress` | `Password1*` | `MySQL 5.7` | `REGION` | `ZONE` | `db-n1-standard-1` |
+
+**Create Instance** → Wait until **Runnable**
+
+> **If enabled:** `SQL → wordpress → Connections → Security → Disable "Allow only SSL connections" → Save`
+
+✅ Check Progress
+
+---
+
+# Task 2 - Configure Cloud SQL
+
+| Action | Navigation | Value |
+|---------|------------|-------|
+| Create Database | `SQL → wordpress → Databases → Create Database` | `wordpress` |
+| Create User | `SQL → wordpress → Users → Add User Account` | `blogadmin` / `Password1*` / Host `%` |
+| Authorize VM | `SQL → wordpress → Connections → Networking → Authorized Networks → Add Network` | `blog-vm` → `BLOG_VM_EXTERNAL_IP/32` |
+
+✅ Check Progress
+
+
+
+
+**Automate way **
 ---
 
 # Set Variables
