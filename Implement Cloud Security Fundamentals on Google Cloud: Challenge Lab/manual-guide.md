@@ -258,6 +258,45 @@ The service **orca-hello-service** should be created successfully.
 
 ------------------------------------------------------------------------
 
+Alternate of task 4 and 5
+
+```
+gcloud container clusters create $CLUSTER_NAME \
+--num-nodes 1 \
+--master-ipv4-cidr=172.16.0.64/28 \
+--network orca-build-vpc \
+--subnetwork orca-build-subnet \
+--enable-master-authorized-networks \
+--master-authorized-networks 192.168.10.2/32 \
+--enable-ip-alias \
+--enable-private-nodes \
+--enable-private-endpoint \
+--service-account $SERVICE_ACCOUNT@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com \
+--zone $ZONE
+
+
+```
+
+Task 5
+```
+
+gcloud compute ssh --zone "$ZONE" "orca-jumphost" \
+--project "$DEVSHELL_PROJECT_ID" \
+--quiet \
+--command "
+gcloud config set compute/zone $ZONE &&
+gcloud container clusters get-credentials $CLUSTER_NAME --internal-ip &&
+sudo apt-get install -y google-cloud-sdk-gke-gcloud-auth-plugin &&
+kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0 &&
+kubectl expose deployment hello-server \
+--name orca-hello-service \
+--type LoadBalancer \
+--port 80 \
+--target-port 8080
+"
+
+```
+
 # Checklist
 
 -   ✅ Custom IAM Role Created
