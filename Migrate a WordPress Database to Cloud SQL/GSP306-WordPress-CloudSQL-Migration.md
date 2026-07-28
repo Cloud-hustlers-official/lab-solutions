@@ -93,8 +93,9 @@ sudo mysqldump -u blogadmin -p'Password1*' wordpress > wordpress_db_backup.sql
 
 mysql --host=$CLOUD_SQL_IP -u blogadmin -p'Password1*' wordpress < wordpress_db_backup.sql
 
-sudo sed -i "s/localhost/$CLOUD_SQL_IP/g" /var/www/html/wordpress/wp-config.php
+sudo sed -i "/DB_HOST/c\define('DB_HOST', '$CLOUD_SQL_IP');" /var/www/html/wordpress/wp-config.php
 
+echo "Verify DB_HOST:"
 grep DB_HOST /var/www/html/wordpress/wp-config.php
 
 sudo service apache2 restart
