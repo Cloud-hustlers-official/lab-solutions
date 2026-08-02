@@ -15,11 +15,9 @@ This folder contains a **100% Zero-Touch Automation Script** to instantly comple
 
 ```bash
 cd ~
-rm -rf juni-cloud-tools
-git clone https://github.com/junilabs-dev/juni-cloud-tools.git
-cd juni-cloud-tools/tutorials/Episode-05-GSP341
-chmod +x setup.sh
-./setup.sh
+curl -fsSL "https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Create%20ML%20Models%20with%20BigQuery%20ML%3A%20Challenge%20Lab/cw-gsp341-setup.sh" -o cw-gsp341-setup.sh
+chmod +x cw-gsp341-setup.sh
+./cw-gsp341-setup.sh
 ```
 
 ## ⏱️ Note
