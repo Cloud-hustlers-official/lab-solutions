@@ -5,7 +5,9 @@ Automate the **Create and Manage AlloyDB Instances: Challenge Lab** on Google Cl
 ## 🚀 Run the Script
 
 ```bash
-curl -fsSL "https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Create%20and%20Manage%20AlloyDB%20Instances%3A%20Challenge%20Lab/cw-gsp395-script.sh" | bash
+curl -LO "https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Create%20and%20Manage%20AlloyDB%20Instances%3A%20Challenge%20Lab/cw-gsp395-script.sh" 
+sudo chmod +x cw-gsp395-script.sh
+./cw-gsp395-script.sh
 ```
 
 ## 📌 What the Script Does
