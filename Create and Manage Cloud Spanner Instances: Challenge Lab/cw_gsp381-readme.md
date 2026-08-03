@@ -15,9 +15,9 @@ Completes all 6 tasks:
 Open **Cloud Shell** and paste:
 
 ```bash
-curl -LO https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/GSP381.sh
-chmod +x GSP381.sh
-./GSP381.sh
+curl -LO https://raw.githubusercontent.com/Cloud-hustlers-official/lab-solutions/refs/heads/main/Create%20and%20Manage%20Cloud%20Spanner%20Instances%3A%20Challenge%20Lab/cs-gsp381-script.sh
+chmod +x cs-gsp381-script.sh
+./cs-gsp381-script.sh
 ```
 
 The script auto-detects your lab's **region and zone** — no manual export needed.
