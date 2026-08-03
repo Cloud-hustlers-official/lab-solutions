@@ -24,7 +24,7 @@ echo -e "${BLUE}${BOLD}╚══════════════════
 
 # PRE-FLIGHT CHECKS & VARIABLES (DYNAMIC AUTO-FETCH)
 # ==============================================================================
-echo "${BOLD}${YELLOW}[Orbit of Ops] Auto-fetching Project, Zone, and Region...${RESET}"
+echo "${BOLD}${YELLOW}[Cloud Hustlers] Auto-fetching Project, Zone, and Region...${RESET}"
 
 export PROJECT_ID=$(gcloud config get-value project 2>/dev/null)
 if [[ -z "$PROJECT_ID" ]]; then
@@ -91,9 +91,20 @@ INSERT INTO countries VALUES ('IT', 'Italy', 1), ('JP', 'Japan', 3), ('US', 'Uni
 INSERT INTO departments VALUES (10, 'Administration', 200, 1700), (20, 'Marketing', 201, 1800), (30, 'Purchasing', 114, 1700), (40, 'Human Resources', 203, 2400), (50, 'Shipping', 121, 1500), (60, 'IT', 103, 1400);
 EOF
 
+# ==============================================================================
+# NON-INTERACTIVE SSH SETUP (prevents key-gen / passphrase prompts on fresh envs)
+# ==============================================================================
+if [[ ! -f "$HOME/.ssh/google_compute_engine" ]]; then
+    echo -e "${CYAN}SSH key not found. Generating non-interactively...${RESET}"
+    mkdir -p "$HOME/.ssh"
+    ssh-keygen -t rsa -f "$HOME/.ssh/google_compute_engine" -N "" -q
+    echo -e "${GREEN}SSH key generated.${RESET}"
+fi
+# ==============================================================================
+
 echo -e "${CYAN}Executing SQL securely via SSH on alloydb-client...${RESET}"
-gcloud compute scp schema.sql alloydb-client:~ --zone=$ZONE
-gcloud compute ssh alloydb-client --zone=$ZONE --command="echo $ALLOYDB_IP > alloydbip.txt && PGPASSWORD=Change3Me psql -h $ALLOYDB_IP -U postgres -f schema.sql"
+gcloud compute scp schema.sql alloydb-client:~ --zone=$ZONE --quiet --strict-host-key-checking=no
+gcloud compute ssh alloydb-client --zone=$ZONE --quiet --strict-host-key-checking=no --command="echo $ALLOYDB_IP > alloydbip.txt && PGPASSWORD=Change3Me psql -h $ALLOYDB_IP -U postgres -f schema.sql"
 
 echo -e "${CYAN}Task 4: Creating Read Pool Instance 'lab-instance-rp1'...${RESET}"
 gcloud alloydb instances create lab-instance-rp1 \
