@@ -10,23 +10,21 @@ MAGENTA='\e[1;35m'
 
 echo -e "${CYAN}${BOLD}"
 cat << "EOF"
-
    _____ _                 _   _   _           _   _                
   / ____| |               | | | | | |         | | | |               
  | |    | | ___  _   _  __| | | |_| |_   _ ___| |_| | ___ _ __ ___ 
  | |    | |/ _ \| | | |/ _` | |  _  | | | / __| __| |/ _ \ '__/ __|
  | |____| | (_) | |_| | (_| | | | | | |_| \__ \ |_| |  __/ |  \__ \
   \_____|_|\___/ \__,_|\__,_| \_| |_/\__,_|___/\__|_|\___|_|  |___/
-  
 EOF
 echo -e "${RESET}"
 echo -e "${BLUE}${BOLD}╔════════════════════════════════════════════════════════════╗${RESET}"
-echo -e "${BLUE}${BOLD}║   🚀 BROUGHT TO YOU BY CLOUD HUSTLERS                     ║${RESET}"
+echo -e "${BLUE}${BOLD}║   🚀 BROUGHT TO YOU BY Cloud hustlers                      ║${RESET}"
 echo -e "${BLUE}${BOLD}╚════════════════════════════════════════════════════════════╝${RESET}\n"
 
 # PRE-FLIGHT CHECKS & VARIABLES (DYNAMIC AUTO-FETCH)
 # ==============================================================================
-echo "${BOLD}${YELLOW}[Cloud Hustlers] Auto-fetching Project, Zone, and Region...${RESET}"
+echo "${BOLD}${YELLOW}[Orbit of Ops] Auto-fetching Project, Zone, and Region...${RESET}"
 
 export PROJECT_ID=$(gcloud config get-value project 2>/dev/null)
 if [[ -z "$PROJECT_ID" ]]; then
@@ -114,4 +112,4 @@ echo -e "\n${MAGENTA}${BOLD}╔════════════════�
 echo -e "${MAGENTA}${BOLD}║            🎉 AUTOMATION COMPLETED SUCCESSFULLY 🎉           ║${RESET}"
 echo -e "${MAGENTA}${BOLD}╚════════════════════════════════════════════════════════════╝${RESET}"
 
-# Subscribe to Cloud Hustlers https://www.youtube.com/@cloudhustlers
+# Subscribe to Orbit of Ops https://www.youtube.com/@cloudhustlers
